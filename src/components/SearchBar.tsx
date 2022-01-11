@@ -4,14 +4,18 @@ import {FaSearch} from "react-icons/fa";
 import Select from 'react-select'
 
 const Wrapper = styled.div`
+  grid-area: filters;
   display: flex;
-  width: 100%;
-  
   column-gap: 2rem;
+  width: 100%;
 `
 
 const Search = styled.div`
   display: flex;
+  
+  svg{
+    fill: #0088DA;
+  }
 `;
 
 const Input = styled.input`
@@ -52,7 +56,7 @@ export const SearchBar = () => {
             <Select
                 isMulti
                 name="colors"
-                placeholder='HomeWorld'
+                placeholder='Homeworld'
                 className="basic-multi-select"
                 classNamePrefix="select"
                 onChange={onChangeHandler}
